@@ -74,3 +74,17 @@ local-package-registry/
 ```
 
 
+
+
+## Run backend
+- run in project root
+```
+$ python -m uvicorn backend.main:app --reload
+```
+
+## Run frontend 
+
+```
+$ cd frontend
+$ npm run dev
+```

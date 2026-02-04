@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api import pypi
+from backend.api import pypi
 
 app = FastAPI(title="Local Package Registry")
 
