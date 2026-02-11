@@ -74,9 +74,22 @@ local-package-registry/
 ```
 
 
-
+## Start db 
+```
+$ podman-compose -f compose.postgres.yml up -d
+$ podman exec -it postgres_db bin/bash    
+$  psql -U pypi -d pypi
+```
 
 ## Run backend
+- create .env
+```
+POSTGRES_USER=pypi
+POSTGRES_PASSWORD=pypi
+POSTGRES_DB=pypi
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+```
 - run in project root
 ```
 $ python -m uvicorn backend.main:app --reload
